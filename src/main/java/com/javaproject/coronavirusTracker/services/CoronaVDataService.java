@@ -39,16 +39,16 @@ public class CoronaVDataService {
         StringReader csvBodyReader = new StringReader(httpResponse.body());
         Iterable<CSVRecord> records = CSVFormat.DEFAULT.withFirstRecordAsHeader().parse(csvBodyReader);
         for (CSVRecord record : records) {
-            LocationStats locationStats = new LocationStats();
-            locationStats.setState(record.get("Province/State"));
-            locationStats.setCountry(record.get("Country/Region"));
+            LocationStats locationStat = new LocationStats();
+            locationStat.setState(record.get("Province/State"));
+            locationStat.setCountry(record.get("Country/Region"));
             int latestCases = Integer.parseInt(record.get(record.size() - 1));
             int prevDayCases = Integer.parseInt(record.get(record.size() - 2));
-            locationStats.setLatestTotalCases(latestCases);
-            locationStats.setLatestTotalCases(latestCases - prevDayCases);
-            newStats.add(locationStats);
+            locationStat.setLatestTotalCases(latestCases);
+            locationStat.setDiffFromPrevDay(latestCases - prevDayCases);
+            newStats.add(locationStat);
         }
         this.allStats = newStats;
-
     }
+
 }
