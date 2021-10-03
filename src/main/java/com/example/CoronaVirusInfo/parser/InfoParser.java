@@ -63,5 +63,4 @@ public class InfoParser implements CommandLineRunner {
             this.repository.save(coronaData);
         }
     }
-
 }
