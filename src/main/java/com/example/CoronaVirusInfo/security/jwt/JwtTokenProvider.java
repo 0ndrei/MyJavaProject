@@ -1,5 +1,6 @@
 package com.example.CoronaVirusInfo.security.jwt;
 
+import com.example.CoronaVirusInfo.models.Role;
 import io.jsonwebtoken.*;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;

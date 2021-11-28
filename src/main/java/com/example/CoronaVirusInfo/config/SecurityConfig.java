@@ -1,5 +1,7 @@
 package com.example.CoronaVirusInfo.config;
 
+import com.example.CoronaVirusInfo.security.jwt.JwtConfigurer;
+import com.example.CoronaVirusInfo.security.jwt.JwtTokenProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

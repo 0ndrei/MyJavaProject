@@ -1,5 +1,8 @@
 package com.example.CoronaVirusInfo.security.jwt;
 
+import com.example.CoronaVirusInfo.models.Role;
+import com.example.CoronaVirusInfo.models.Status;
+import com.example.CoronaVirusInfo.models.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 

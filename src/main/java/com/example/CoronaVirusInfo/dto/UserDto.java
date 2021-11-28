@@ -1,5 +1,6 @@
 package com.example.CoronaVirusInfo.dto;
 
+import com.example.CoronaVirusInfo.models.User;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 

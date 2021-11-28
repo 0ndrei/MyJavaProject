@@ -1,5 +1,9 @@
 package com.example.CoronaVirusInfo.security;
 
+import com.example.CoronaVirusInfo.models.User;
+import com.example.CoronaVirusInfo.security.jwt.JwtUser;
+import com.example.CoronaVirusInfo.security.jwt.JwtUserFactory;
+import com.example.CoronaVirusInfo.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
