@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 @Data
 @Entity
-@Table(name = "coronaVirus")
+@Table(name = "corona_virus")
 public class CoronaData {
 
     @Id
