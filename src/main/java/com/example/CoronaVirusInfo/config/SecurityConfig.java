@@ -34,8 +34,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .authorizeRequests()
+                .antMatchers("/api/v1/auth/corona/**").hasRole("ADMIN")
                 .antMatchers("/api/v1/auth/login", "/api/v1/auth/corona/**").permitAll()
-                //.antMatchers("/api/v1/auth/corona/**").hasRole("ADMIN")
                 .anyRequest().authenticated()
                 .and()
                 .apply(new JwtConfigurer(jwtTokenProvider));
